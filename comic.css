@@ -1,0 +1,211 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Gen Jyuu Gothic";
+}
+
+.toolbar {
+  display: flex;
+  background-color: black;
+  padding: 10px 20px;
+  width: 100%;
+  height: 36px;
+  position: relative;
+  align-items: center;
+  z-index: 100;
+}
+
+.info {
+  position: absolute;
+  display: flex;
+  width: 44%;
+  z-index: 100;
+  padding: 10px;
+}
+
+.info ul {
+  align-items: center; 
+  display: flex;
+}
+
+ul {
+  margin: 0 0 0 -40px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+li {
+  float: left;
+  list-style-type: none;
+  display: block;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.location {
+  display: flex;
+  position: relative;
+  z-index: 50;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.location ul {
+  display: flex; 
+  align-items: center; 
+  list-style: none; 
+}
+
+
+.menu {
+  margin-right: 8px;
+}
+
+.small {
+  margin: 0 4px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+  color: white;
+}
+
+.page {
+  display: flex;
+  margin: 0 auto;
+  min-width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  display: none;
+}
+
+.page img {
+  width: 100%;
+  height: auto;
+  margin: 64px auto 0;
+  text-align: center;
+}
+
+.pagebar {
+  display: flex;
+  min-width: 100%;
+  background-color: black;
+  height: 48px;
+  align-items: center;
+  bottom: 0;
+}
+
+.pagebar ul {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.toolbar,
+.pagebar {
+  position: fixed;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0);
+}
+
+/* 隐藏导航栏和底栏 */
+.hiddenup {
+  transform: translateY(-100%);
+}
+
+.hiddendown {
+  transform: translateY(100%);
+}
+
+.go_top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 374px) {
+  .page img {
+    width: 335px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .page img {
+    width: 335px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .page img {
+    width: 497px;
+  }
+  .pagebar {
+    display: none;
+  }
+  .location {
+    display: block;
+  }
+  .menu {
+    margin-right: 12px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1279px) {
+  .page img {
+    width: 675px;
+  }
+  .pagebar {
+    display: none;
+  }
+  .location {
+    display: block;
+  }
+  .menu {
+    margin-right: 12px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .page img {
+    width: 861px;
+  }
+  .pagebar {
+    display: none;
+  }
+  .location {
+    display: block;
+  }
+  .menu {
+    margin-right: 12px;
+  }
+  p {
+    font-size: 18px;
+  }
+}

@@ -14,10 +14,7 @@ html, body{
     place-content: center;
     /*-webkit-box-pack: center;*/
 
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover !important;
-    background-clip: border-box;
+    background: center center / cover no-repeat border-box;
     position: relative;
     text-align: center;
 
@@ -35,3 +32,4 @@ button{
     border: none;
     
 }
+
