@@ -46,6 +46,16 @@ a {
   text-decoration: none;
 }
 
+.arrow{
+  border: 1px solid #ffffff5e ;
+  border-radius: 2px;
+  margin: 12px 8px;
+}
+
+.arrow:hover{
+  background-color: #565656;
+}
+
 .location {
   display: flex;
   position: relative;
@@ -76,6 +86,7 @@ p {
   font-weight: 400;
   line-height: 160%;
   color: white;
+  letter-spacing: 1px;
 }
 
 .page {
