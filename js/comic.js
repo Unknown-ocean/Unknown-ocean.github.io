@@ -1,7 +1,8 @@
 $(document).ready(function () {
     const toolbar = document.querySelector('.toolbar');
     const pagebar = document.querySelector('.pagebar');
-    const overlay = document.getElementById('overlay');
+    const leftmenu = document.querySelector('.leftmenu');
+    const overlay = document.getElementById('.overlay');
     const scrollToTopButton = document.getElementById('topBtn');
     let isHiddenup = false;
     let isHiddendown = false;
@@ -35,12 +36,17 @@ $(document).ready(function () {
         }
     });
 
-    // 点击按钮时平滑滚动回顶部
-    scrollToTopButton.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // 触发浏览器的平滑滚动行为
-        });
+    $("#topBtn").click(function () {
+        jQuery("html,body").animate({
+            scrollTop: 0
+        }, 700);
+    });
 
+    $('.menu').click(function () {
+        $('.leftmenu').toggleClass('opened');
+    });
+
+    $('.close').click(function () {
+        $('.leftmenu').toggleClass('opened');
     });
 });
