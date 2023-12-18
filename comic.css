@@ -238,13 +238,13 @@ p,
 
 @media screen and (min-width: 375px) and (max-width: 767px) {
   .page img {
-    width: 375px;
+    width: 440px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .page img {
-    width: 497px;
+    width: 580px;
   }
   .pagebar {
     display: none;
@@ -266,7 +266,7 @@ p,
 
 @media screen and (min-width: 992px) and (max-width: 1279px) {
   .page img {
-    width: 675px;
+    width: 740px;
   }
   .pagebar {
     display: none;
