@@ -1,0 +1,110 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+
+.progress {
+  position: relative;
+}
+.logo{
+  position: absolute;
+  bottom: 12px;
+  left: -6px;
+ 
+}
+#Button {
+  width: 260px;
+  padding: 15px 10px;
+  margin: 24px 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  background-image: url("./img/img/btn\ img@2x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+  font-family: "Gen Jyuu Gothic";
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.questions {
+  width: auto;
+  font-size: 16px;
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+p.qa {
+  text-align: left;
+  width: 80%;
+  margin-top: 12%;
+}
+
+.one_image {
+  position: relative;
+  width: 100%;
+  height: 360px; /* 根据需要调整波浪图像容器的高度 */
+}
+
+/* 波浪图像样式 */
+.wave {
+  position: absolute;
+  height: auto;
+}
+/* 每个波浪图像的位置和大小 */
+.one {
+  height: 62px;
+}
+.two {
+  height: 66px;
+}
+.three {
+  height: 70px;
+}
+.four {
+  height: 66px;
+}
+.five {
+  height: 66px;
+}
+
+/* 波浪图像的堆叠顺序 */
+.one,
+.two,
+.three,
+.four,
+.five {
+  z-index: 1;
+}
+
+.one {
+  top: 4rem;
+  left: 2rem;
+}
+.two {
+  top: 6rem;
+  left: 5rem;
+}
+.three {
+  top: 9rem;
+  left: 0rem;
+}
+.four {
+  top: 12rem;
+  left: 6rem;
+}
+.five {
+  top: 15rem;
+  left: 2rem;
+}

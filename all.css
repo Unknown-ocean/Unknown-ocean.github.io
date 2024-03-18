@@ -1,0 +1,28 @@
+html {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Gen Jyuu Gothic", "Otsutome_font", "Mukasi Mukasi",
+    "Chenyuluoyan";
+  background-image: url("./img/img/Q1bg.png");
+  width:100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+
+  /*物件置中*/
+  align-items: center;
+  place-content: center;
+  /*-webkit-box-pack: center;*/
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  background-color: #01235e;
+  position: relative;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+

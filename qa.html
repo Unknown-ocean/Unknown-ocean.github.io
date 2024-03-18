@@ -1,104 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>設畜身份測驗｜茫茫大海</title>
+    <meta property="og:title" content="在設畜生態的你是什麼魚 | 茫茫大海">
+    <meta property="og:image" content="你的新缩略图链接">
+    <title>在設畜生態的你是什麼魚 | 茫茫大海</title>
     <link rel="icon" type="image" href="./img/logo.svg">
+    <link rel="stylesheet" href="qa.css" type="text/css" />
+    <link rel="stylesheet" href="all.css" type="text/css" />
 </head>
 
 <body>
-
-    <div id="questions">
+    
+    <div class="questions">
+        <div class="progress">
+            <div class="logo"><img src="./img/img/logo progress.png" width="18"></div>
+            <div class="bar"><img src="./img/img/bar.png" width="280"></div>
+        </div>
+        <p class="qa" data-index="0">在海中一覺醒來，你發現自己的雙腳變成了魚尾，變身成了美人魚! 面對這巨大變化你最想…</p>
         <div class="question" data-index="0">
-            <p>眼前是你準備乘坐的深海探索器，你希望它會是？</p>
-            <button class="option" data-score="2" data-person="leader">現代先進科技</button>
-            <button class="option" data-score="2" data-person="detail">復古、堅固耐用</button>
-            <button class="option" data-score="6" data-person="create">獨特風格的自製探索器</button>
+            <div class="one_image">
+                <img class="wave one" src="./img/img/wave05.png" alt="Wave 5">
+                <img class="wave two" src="./img/img/wave04.png" alt="Wave 4">
+                <img class="wave three" src="./img/img/wave03.png" alt="Wave 3">
+                <img class="wave four" src="./img/img/wave02.png" alt="Wave 2">
+                <img class="wave five" src="./img/img/wave01.png" alt="Wave 1">
+            </div>
+            <input type="button" id="Button" class="qa_btn" data-score="15" data-person="leader"
+                value="用力擺尾到處游動"></input>
+            <input type="button" id="Button" class="qa_btn" data-score="12" data-person="detail"
+                value="照照鏡子看看全貌"></input>
+            <input type="button" id="Button" class="qa_btn" data-score="20" data-person="talk"
+                value="立即拍照分享給朋友"></input>
         </div>
-
-        <div class="question" data-index="1">
-            <p>進入深海探索器後，你會優先：</p>
-            <button class="option" data-score="5" data-person="leader">熟悉操控台，開始探索之旅</button>
-            <button class="option" data-score="4" data-person="detail">參觀各個角落，了解其運作原理</button>
-            <button class="option" data-score="2" data-person="team">與同行夥伴合照，留下珍貴的回憶</button>
-        </div>
+    </div>
 
 
-        <div class="question" data-index="2">
-            <p>你發現了探險地圖路線有三種，你決定去找？</p>
-            <button class="option" data-score="3" data-person="create">神秘生物的棲息地</button>
-            <button class="option" data-score="5" data-person="detail">海底遺跡與古老文明的蹤跡</button>
-            <button class="option" data-score="1" data-person="talk">沉淪海底的寶藏與珍貴財富</button>
-        </div>
-
-        <div class="question" data-index="3">
-            <p>進入深海後第一眼遇到的景象？</p>
-            <button class="option" data-score="5" data-person="create">一座壯觀的鯨落</button>
-            <button class="option" data-score="3" data-person="one">奇形怪狀的魚類</button>
-            <button class="option" data-score="1" data-person="detail">一大片人類屍骨</button>
-        </div>
-
-        <div class="question" data-index="4">
-            <p>你發覺有群體生物跟了一段時間，你覺得是？</p>
-            <button class="option" data-score="2" data-person="create">可愛的小丑魚</button>
-            <button class="option" data-score="3" data-person="leader">危險的鯊魚</button>
-            <button class="option" data-score="6" data-person="one">慢悠悠的海龜</button>
-        </div>
-
-        <div class="question" data-index="5">
-            <p>你發覺有群體生物跟了一顯示缺乏燃料，你會先？</p>
-            <button class="option" data-score="6" data-person="leader">組織團隊尋找替代材料</button>
-            <button class="option" data-score="4" data-person="team">呼叫支援尋求幫助</button>
-            <button class="option" data-score="4" data-person="talk">靜觀其變，等待進一步指示</button>
-        </div>
-
-        <div class="question" data-index="6">
-            <p>在旅途中你發現，同行夥伴情況不是很好，這時候</p>
-            <button class="option" data-score="4" data-person="leader">主動關心詢問狀況，提供幫助</button>
-            <button class="option" data-score="3" data-person="team">危險給予夥伴空間，並在適當時候表達關心</button>
-            <button class="option" data-score="6" data-person="talk">陪伴對方聊天，轉移他們的注意力</button>
-        </div>
-
-        <div class="question" data-index="7">
-            <p>深海探索器某一部分突然發生故障，你會？</p>
-            <button class="option" data-score="4" data-person="one">嘗試自己解決問題，找出解決辦法</button>
-            <button class="option" data-score="6" data-person="team">呼叫同行夥伴一起想辦法，合力解決問題</button>
-            <button class="option" data-score="3" data-person="talk">在旁指揮夥伴進行操作，提供建議</button>
-        </div>
-
-        <div class="question" data-index="8">
-            <p>前往深海區域的過程中，沒想到卻發生！</p>
-            <button class="option" data-score="1" data-person="team">劇烈顛簸，無法保持平衡</button>
-            <button class="option" data-score="5" data-person="talk">順利到達目的地，平安無事</button>
-            <button class="option" data-score="1" data-person="one">處於漆黑的深海環境，視野受限</button>
-        </div>
-
-        <div class="question" data-index="9">
-            <p>到達海底探險目的地後，你會想要：</p>
-            <button class="option" data-score="2" data-person="talk">先拍照，上岸後分享探險新發現</button>
-            <button class="option" data-score="6" data-person="detail">仔細觀察周圍環境</button>
-            <button class="option" data-score="2" data-person="one">放鬆身心，欣賞美景</button>
-        </div>
-
-        <div class="question" data-index="10">
-            <p>回想今日的海底探險，最深刻的是：</p>
-            <button class="option" data-score="1" data-personality="create">美不勝收的海底景色</button>
-            <button class="option" data-score="5" data-personality="team">與朋友一同冒險的經歷</button>
-            <button class="option" data-score="1" data-personality="leader">完成探險的成就感</button>
-        </div>
-
-        <div class="question" data-index="11">
-            <p>如果下次有機會再來，路線你會建議朋友：</p>
-            <button class="option" data-score="5" data-personality="one">跟著感覺走</button>
-            <button class="option" data-score="3" data-personality="detail">照著探險地圖走</button>
-            <button class="option" data-score="4" data-personality="create">自創其他路線</button>
-        </div>
 
 
-        <script src="js/jquery-3.7.0.min.js"></script>
-        <script src="./js/qa.js"></script>
+
+
+
+
+
+
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="./js/qa.js"></script>
+    <script src="./js/qa_animate.js"></script>
+
 </body>
 
 </html>
