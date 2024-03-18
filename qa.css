@@ -47,6 +47,7 @@ body {
 }
 
 p.qa {
+  font-weight: 500;
   text-align: left;
   width: 308px;
 }
@@ -55,6 +56,7 @@ p.qa {
   position: relative;
   width: 100%;
   height: 320px; /* 根据需要调整波浪图像容器的高度 */
+  top: -32px;
 }
 
 /* 波浪图像样式 */
