@@ -197,3 +197,25 @@ p.q3{
   margin: 48px;
 }
 
+/*q4*/
+.sea{
+  margin:0 35px 25px 0;
+}.ocean{
+  margin: 35px 0 25px 0;
+}
+.warning p{
+  font-size: 14px;
+  color: aqua;
+  margin: -10px;
+}
+
+p.q4{
+  margin-bottom: 40px;
+}
+.image-selection {
+  text-align: center;
+}
+.image-selection img {
+  cursor: pointer;
+}
+

@@ -70,24 +70,40 @@
                 " width="420" style="margin-top: -80px;">
             </div>
             <p class="qa q3" style="margin-top: -40px;">得知這個消息你決定……</p>
-            
+
             <input type="button" class="qa_btn" data-score="15" data-person="one" value="不以為意，當作是恐嚇信"></input>
             <input type="button" class="qa_btn" data-score="20" data-person="talk" value="歹誌大條，抓住隔壁小魚蝦詢問"></input>
             <input type="button" class="qa_btn" data-score="10" data-person="create" value="先享受片刻，最後8小時再動身"></input>
         </div>
 
         <div class="question" data-index="3">
-            <p class="qa">此時你看到不遠處散發光芒的寶石緩緩靠近，溫暖又刺眼，好像是來幫助你解開人魚詛咒，瞇眼仔細看後發現它的形狀像是…</p>
+            <p class="qa q4">此時你看到不遠處散發光芒的寶石緩緩靠近，溫暖又刺眼，好像是來幫助你解開人魚詛咒，瞇眼仔細看後發現它的形狀像是…</p>
             <div class="container">
-                <img class="pearl" src="./img/img/pearl-1@3x.png" alt="珍珠" widt="80">
-                <img class="shell" src="./img/img/shell-1@3x.png" alt="珍珠" widt="80">
-                <img class="star" src="./img/img/star-1@3x.png" alt="珍珠" widt="80">
-                <img class="coral" src="./img/img/coral-1@3x.png" alt="珍珠" widt="80">
+                <div class="image-selection">
+                    <img class="sea pearl" src="./img/img/pearl-1@3x.png" data-score="12" data-person="detail" alt="珍珠"
+                        width="80">
+                    <img class="ocean shell" src="./img/img/shell-1@3x.png" data-score="20" data-person="team" alt="貝殼"
+                        width="112">
+                    <br><span class="warning">
+                        <p>請點選圖案</p>
+                    </span>
+                    <img class="sea star" src="./img/img/star-1@3x.png" data-score="10" data-person="create" alt="星星"
+                        width="108">
+                    <img class="ocean coral" src="./img/img/coral-1@3x.png" data-score="15" data-person="one" alt="珊瑚"
+                        width="98">
+                </div>
             </div>
-            
-            <input type="button" class="qa_btn" data-score="15" data-person="one" value="不以為意，當作是恐嚇信"></input>
-            <input type="button" class="qa_btn" data-score="20" data-person="talk" value="歹誌大條，抓住隔壁小魚蝦詢問"></input>
-            <input type="button" class="qa_btn" data-score="10" data-person="create" value="先享受片刻，最後8小時再動身"></input>
+            <button id="selectBtn">選好了</button>
+
+        </div>
+        <div class="question" data-index="4">
+            <p class="qa">跟著寶石游著游著，你發現海底熱鬧繁華，原來是正在舉辦音樂節，同時，遠方出現水母向你招手，邀你一同歡慶，於是你...</p>
+            <div class="container">
+                <img src="./img/img/333.png" alt="水母">
+            </div>
+            <input type="button" class="qa_btn" data-score="20" data-person="talk" value="過去詢問詛咒一事"></input>
+            <input type="button" class="qa_btn" data-score="15" data-person="one" value="時間還很充裕先逛逛"></input>
+            <input type="button" class="qa_btn" data-score="12" data-person="detail" value="先取得解藥再折返"></input>
         </div>
     </div>
 
