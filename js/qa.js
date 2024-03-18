@@ -1,52 +1,59 @@
 $(document).ready(function () {
-    const questions = $('.question');
-    let currentIndex = 0;
-    let totalScore = {};
+    let totalScore = 0; // 总分数
+    let currentQuestionIndex = 0; // 当前题目索引
 
-    // 初始化每個人格的分數為0
-    $('.qa_btn').each(function () {
-        const person = $(this).data('person');
-        totalScore[person] = 0;
-    });
+    // 隐藏除第一题外的其他题目
+    $('.question').not(':eq(0)').hide();
 
-    // 隱藏所有問題，除了第一個
-    questions.hide();
-    questions.eq(currentIndex).show();
-
-    // 點擊選項時處理下一個問題並加分
+    // 点击问题按钮时的处理
     $('.qa_btn').on('click', function () {
-        const currentQuestion = questions.eq(currentIndex);
-        const score = parseInt($(this).data('score')); // 從 data-score 中取得分數
-        const person = $(this).data('person'); // 從 data-person 中取得人格
+        // 累积分数
+        totalScore += parseInt($(this).data('score'));
 
-        // 增加總分
-        totalScore[person] += score;
+        // 显示下一题目并隐藏当前题目
+        $('.question').eq(currentQuestionIndex).hide();
+        currentQuestionIndex++; // 更新题目索引
 
-        currentQuestion.hide();
-
-        // 移至下一個問題
-        currentIndex++;
-
-        if (currentIndex < questions.length) {
-            questions.eq(currentIndex).show();
+        // 如果是第二题，显示下一题，否则显示结果
+        if (currentQuestionIndex === 1) {
+            $('.question').eq(currentQuestionIndex).show();
+        } else if (currentQuestionIndex === 2) {
+            // 第二题之后的处理，例如移动进度条的 logo
+            $('.logo').animate({ left: '35px' }, 'slow');
+            $('.question').eq(currentQuestionIndex).show();
         } else {
-            // 回答完所有問題，跳轉到結果頁面
-            redirectToResultPage(totalScore);
+            // 显示结果或其他处理逻辑
+            alert('总分数为：' + totalScore);
         }
     });
 
-    // 跳轉到結果頁面
-    function redirectToResultPage(score) {
-        // 找出分數最高的人格類型
-        const maxScore = Math.max(...Object.values(score));
-        const maxScorePersons = Object.keys(score).filter(person => score[person] === maxScore);
-        const randomMaxScorePerson = maxScorePersons[Math.floor(Math.random() * maxScorePersons.length)];
+    // 点击选好了按钮时的处理
+    $('#selectBtn').on('click', function () {
+        // 移动进度条的 logo
+        $('.logo').animate({ left: '35px' }, 'slow');
+        
+        // 显示下一题目并隐藏当前题目
+        $('.question').eq(currentQuestionIndex).hide();
+        currentQuestionIndex++; // 更新题目索引
 
-        // 指定結果頁面的路徑，根據您的目錄結構進行調整
-        const resultPage = 'results/' + randomMaxScorePerson + '.html';
-        window.location.href = resultPage;
-    }
+        // 如果是第二题，显示下一题，否则显示结果
+        if (currentQuestionIndex === 1) {
+            $('.question').eq(currentQuestionIndex).show();
+        } else if (currentQuestionIndex === 2) {
+            $('.question').eq(currentQuestionIndex).show();
+        } else {
+            // 显示结果或其他处理逻辑
+            alert('总分数为：' + totalScore);
+        }
+    });
 });
+
+
+
+
+
+
+
 
 //q2
 $(document).ready(function () {
