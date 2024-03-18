@@ -4,7 +4,7 @@ $(document).ready(function () {
     let totalScore = {};
 
     // 初始化每個人格的分數為0
-    $('.option').each(function () {
+    $('.qa_btn').each(function () {
         const person = $(this).data('person');
         totalScore[person] = 0;
     });
@@ -14,7 +14,7 @@ $(document).ready(function () {
     questions.eq(currentIndex).show();
 
     // 點擊選項時處理下一個問題並加分
-    $('.option').on('click', function () {
+    $('.qa_btn').on('click', function () {
         const currentQuestion = questions.eq(currentIndex);
         const score = parseInt($(this).data('score')); // 從 data-score 中取得分數
         const person = $(this).data('person'); // 從 data-person 中取得人格
@@ -46,5 +46,53 @@ $(document).ready(function () {
         const resultPage = 'results/' + randomMaxScorePerson + '.html';
         window.location.href = resultPage;
     }
-
 });
+
+//q2
+$(document).ready(function () {
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    let currentSlideIndex = 0;
+
+    function showSlide(index) {
+        // 隐藏所有幻灯片
+        slides.forEach(slide => slide.style.display = 'none');
+        // 显示指定索引的幻灯片
+        slides[index].style.display = 'block';
+    }
+
+    // 初始化，显示第一张幻灯片
+    showSlide(currentSlideIndex);
+
+    // 向前切换幻灯片
+    function prevSlide() {
+        currentSlideIndex = (currentSlideIndex === 0) ? totalSlides - 1 : currentSlideIndex - 1;
+        showSlide(currentSlideIndex);
+    }
+
+    // 向后切换幻灯片
+    function nextSlide() {
+        currentSlideIndex = (currentSlideIndex === totalSlides - 1) ? 0 : currentSlideIndex + 1;
+        showSlide(currentSlideIndex);
+    }
+
+    // 监听左箭头按钮点击事件
+    $('.leftarrow_btn').on('click', prevSlide);
+
+    // 监听右箭头按钮点击事件
+    $('.rightarrow_btn').on('click', nextSlide);
+});
+
+//progress
+$(document).ready(function () {
+    const logo = $('.logo');
+    const bar = $('.bar');
+  
+    $('.qa_btn').on('click', function () {
+      // 答对问题后，将 logo 向右移动 35px
+      logo.css('transform', 'translateX(38px)');
+      // 如果您希望移动后 logo 不再动画，则将 transition 属性设为空字符串
+      logo.css('transition', 'transform 1s');
+    });
+  });
+  

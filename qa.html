@@ -14,30 +14,52 @@
 </head>
 
 <body>
-    
+
     <div class="questions">
         <div class="progress">
             <div class="logo"><img src="./img/img/logo progress.png" width="18"></div>
             <div class="bar"><img src="./img/img/bar.png" width="280"></div>
         </div>
-        <p class="qa" data-index="0">在海中一覺醒來，你發現自己的雙腳變成了魚尾，變身成了美人魚! 面對這巨大變化你最想…</p>
         <div class="question" data-index="0">
-            <div class="one_image">
+            <p class="qa">在海中一覺醒來，你發現自己的雙腳變成了魚尾，變身成了美人魚! 面對這巨大變化你最想…</p>
+            <div class="container">
                 <img class="wave one" src="./img/img/wave05.png" alt="Wave 5">
                 <img class="wave two" src="./img/img/wave04.png" alt="Wave 4">
                 <img class="wave three" src="./img/img/wave03.png" alt="Wave 3">
                 <img class="wave four" src="./img/img/wave02.png" alt="Wave 2">
                 <img class="wave five" src="./img/img/wave01.png" alt="Wave 1">
             </div>
-            <input type="button" id="Button" class="qa_btn" data-score="15" data-person="leader"
-                value="用力擺尾到處游動"></input>
-            <input type="button" id="Button" class="qa_btn" data-score="12" data-person="detail"
-                value="照照鏡子看看全貌"></input>
-            <input type="button" id="Button" class="qa_btn" data-score="20" data-person="talk"
-                value="立即拍照分享給朋友"></input>
+            <input type="button" class="qa_btn" data-score="15" data-person="leader" value="用力擺尾到處游動"></input>
+            <input type="button" class="qa_btn" data-score="12" data-person="detail" value="照照鏡子看看全貌"></input>
+            <input type="button" class="qa_btn" data-score="20" data-person="talk" value="立即拍照分享給朋友"></input>
+        </div>
+
+        <div class="question" data-index="1">
+            <p class="qa">習慣了一陣子美人魚的姿態後面向眼前的茫茫大海，你最期待能看到…</p>
+            <div class="container">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="./img/img/q2 a_1@4x.png" data-score="10" data-person="create" alt="智慧生物的棲息地" width="370">
+                        <p class="option">智慧生物的棲息地</p>
+                    </div>
+                    <div class="slide">
+                        <img src="./img/img/q2 b_1@4x.png" data-score="15" data-person="leader" alt="金光閃閃的大秘寶" width="376">
+                        <p class="option">金光閃閃的大秘寶</p>
+                    </div>
+                    <div class="slide">
+                        <img src="./img/img/q2 c@2x.png" data-score="12" data-person="detail" alt="未公開的古代遺跡之謎" width="326" style="margin-top: 64px;">
+                        <p class="option">未公開的古代遺跡之謎</p>
+                    </div>
+                </div>
+                <div class="arrow-container">
+                    <button type="button" class="leftarrow_btn"><img src="./img/img/arrow@4x.png" width="36"></button>
+                    <button type="button" class="rightarrow_btn"><img src="./img/img/arrow@4x 2.png" width="36"></button>
+                </div>
+                <button id="selectBtn">選好了</button>
+            </div>
+
         </div>
     </div>
-
 
 
 
