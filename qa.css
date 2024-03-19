@@ -8,6 +8,7 @@ body {
   justify-content: center; /* 水平居中 */
   align-items: center; /* 垂直居中 */
   overflow-x: hidden;
+  flex-direction: column;
 }
 
 .progress {
@@ -262,33 +263,9 @@ p.q4 {
   margin-top: 12px;
 }
 
-.tap{
-  animation: moveUp 1s ease infinite;
-}
-@keyframes moveUp {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-14px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 .tap_t {
   margin: 4px 0;
   font-weight: 600;
-}
-.shine {
-  opacity: 0;
-  animation: shineAnimation 3s ease-in-out infinite;
-}
-
-@keyframes shineAnimation {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
 }
 
 

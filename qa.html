@@ -10,16 +10,17 @@
     <title>在設畜生態的你是什麼魚 | 茫茫大海</title>
     <link rel="icon" type="image" href="./img/logo.svg">
     <link rel="stylesheet" href="qa.css" type="text/css" />
+    <link rel="stylesheet" href="animation.css" type="text/css" />
     <link rel="stylesheet" href="all.css" type="text/css" />
 </head>
 
 <body>
-
+    <div class="progress">
+        <div class="logo"><img src="./img/img/logo progress.png" width="18"></div>
+        <div class="bar"><img src="./img/img/bar.png" width="280"></div>
+    </div>
     <div class="questions">
-        <div class="progress">
-            <div class="logo"><img src="./img/img/logo progress.png" width="18"></div>
-            <div class="bar"><img src="./img/img/bar.png" width="280"></div>
-        </div>
+
         <div class="question" data-index="0">
             <p class="qa">在海中一覺醒來，你發現自己的雙腳變成了魚尾，變身成了美人魚! 面對這巨大變化你最想…</p>
             <div class="container">
@@ -54,6 +55,9 @@
                         <p class="option">未公開的古代遺跡之謎</p>
                     </div>
                 </div>
+                <span class="warning">
+                    <p style="margin-top: 16px;">點選箭頭選擇答案</p>
+                </span>
                 <div class="arrow-container">
                     <button type="button" class="leftarrow_btn"><img src="./img/img/arrow@4x.png" width="36"></button>
                     <button type="button" class="rightarrow_btn"><img src="./img/img/arrow@4x 2.png"
@@ -98,7 +102,13 @@
         <div class="question" data-index="4">
             <p class="qa">跟著寶石游著游著，你發現海底熱鬧繁華，原來是正在舉辦音樂節，同時，遠方出現水母向你招手，邀你一同歡慶，於是你...</p>
             <div class="container q5">
-                <img src="./img/img/333.png" alt="水母" width="316">
+                <img class="shine e" src="./img/img/001@3x.png" width="126"
+                    style="margin: 130px -20px;position: absolute;">
+                <img class="shine" src="./img/img/002@3x.png" width="88" style="margin: 60px 200px;position: absolute;">
+
+                <img class="jump r" src="./img/img/水母02@3x.png" alt="水母" width="94">
+                <img class="jump" src="./img/img/水母01@2x.png" alt="水母" width="185">
+
             </div>
             <input type="button" class="qa_btn" data-score="20" data-person="talk" value="過去詢問詛咒一事"></input>
             <input type="button" class="qa_btn" data-score="15" data-person="one" value="時間還很充裕先逛逛"></input>
@@ -139,7 +149,7 @@
             <input type="button" class="qa_btn q8" data-score="15" data-person="leader" value="能聽我指揮的全能虎鯨
             "></input>
         </div>
-        
+
         <div class="question" data-index="8">
             <p class="final">終於走到盡頭<br>
                 現在距離解開詛咒時間倒數1分鐘！</p>

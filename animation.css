@@ -1,0 +1,117 @@
+.tap {
+  animation: moveUp 1s ease infinite;
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.jump {
+  animation: moveDown 5s ease infinite;
+}
+.r {
+  animation: moveDown 3s ease infinite;
+}
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.shine {
+  opacity: 0;
+  animation: shineAnimation 3s ease-in-out infinite;
+}
+
+.e {
+  animation: shineAnimation 7s ease-in-out infinite;
+}
+
+@keyframes shineAnimation {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.wave.four {
+  animation: moveLeft 6s ease infinite;
+}
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-32px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.wave.two {
+  opacity: 0; /* 初始设置为透明 */
+  animation: fadeInOut 10s infinite; /* 使用动画并持续循环 */
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+.wave.five {
+  opacity: 0; /* 初始设置为透明 */
+  animation: fadeInOut 7s infinite; /* 使用动画并持续循环 */
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.wave.three {
+  opacity: 0; /* 初始设置为透明 */
+  animation: fadeInOutRight 5s infinite; /* 使用动画并持续循环 */
+}
+
+@keyframes fadeInOutRight {
+  0% {
+    /* 初始状态 */
+    opacity: 0;
+    transform: translateX(-100px); /* 初始位置 */
+  }
+  50% {
+    /* 中间状态 - 淡入 */
+    opacity: 1;
+    transform: translateX(0); /* 向右平移到初始位置 */
+  }
+  100% {
+    /* 结束状态 - 淡出 */
+    opacity: 0;
+    transform: translateX(20px); /* 向右平移到结束位置 */
+  }
+}
