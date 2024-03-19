@@ -25,22 +25,26 @@ $(document).ready(function () {
 
     //progress
     $(document).ready(function () {
-        const logo = $('.logo');
-        const bar = $('.bar');
-
-        $('.qa_btn').on('click', function () {
-            // 答对问题后，将 logo 向右移动 35px
-            logo.css('transform', 'translateX(38px)');
-            // 如果您希望移动后 logo 不再动画，则将 transition 属性设为空字符串
-            logo.css('transition', 'transform 1s');
+        // 初始 logo 位置
+        let logoPosition = 0;
+    
+        // 点击 .qa_btn 或 .selectBtn 时触发
+        $('.qa_btn, .selectBtn').on('click', function () {
+            // 移动 logo 到右边
+            $('.logo').animate({ left: '+=14%' }, 'slow');
+    
+            // 检查是否是最后一个问题，如果是则隐藏进度条
+            if ($(this).closest('.question').data('index') === 8) {
+                $('.progress').fadeOut();
+            }
         });
     });
+    
+
 
 
     // 监听"選好了"按钮点击事件
     $('.selectBtn').on('click', function () {
-        // 移动进度条的 logo
-        $('.logo').animate({ left: '35px' }, 'slow');
 
         // 显示下一题目并隐藏当前题目
         $('.question').eq(currentQuestionIndex).hide();
@@ -146,31 +150,6 @@ $(document).ready(function () {
         $(this).attr('src', './img/img/coral-2@3x.png');
     });
 });
-
-$(document).ready(function () {
-    // 監聽 "選好了" 按鈕點擊事件
-    $('.selectBtn,.qa_btn').on('click', function () {
-        // 移動進度條的 logo
-        $('.progress .logo').animate({ left: '35px' }, 'slow');
-
-        // 隱藏當前問題並顯示下一個問題
-        let currentQuestion = $(this).closest('.question');
-        currentQuestion.hide();
-
-        // 獲取下一個問題的索引
-        let nextQuestionIndex = parseInt(currentQuestion.data('index')) + 1;
-        let nextQuestion = $('.question[data-index="' + nextQuestionIndex + '"]');
-
-        // 如果下一個問題存在，則顯示它
-        if (nextQuestion.length) {
-            nextQuestion.show();
-        } else {
-            // 如果沒有下一個問題，執行其他操作，例如跳轉到結果頁面
-            console.log('所有問題都已經回答完畢。');
-        }
-    });
-});
-
 
 //q5 bg
 $(document).ready(function () {
