@@ -16,7 +16,7 @@ h3{
   color: white;
 }
 
-.start, .comic {
+.start{
   border: none;
   padding: 10px 20px;
   margin: 12px 0;
@@ -42,5 +42,15 @@ h3{
 }
 
 .comic {
-  margin-bottom: 60px;
+  margin-bottom: 120px;
+  color: white;
+  font-family: "Gen Jyuu Gothic";
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+
 }
+
