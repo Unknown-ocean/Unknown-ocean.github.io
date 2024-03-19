@@ -34,15 +34,13 @@ $(document).ready(function () {
             $('.logo').animate({ left: '+=14%' }, 'slow');
     
             // 检查是否是最后一个问题，如果是则隐藏进度条
-            if ($(this).closest('.question').data('index') === 8) {
+            if ($(this).closest('.question').data('index') === 7) {
                 $('.progress').fadeOut();
+                $('.question[data-index="8"]').fadeIn();
             }
         });
     });
     
-
-
-
     // 监听"選好了"按钮点击事件
     $('.selectBtn').on('click', function () {
 

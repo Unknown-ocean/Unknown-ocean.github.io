@@ -48,7 +48,28 @@
     opacity: 1;
   }
 }
+.swim {
+  opacity: 0; /* 初始设置为透明 */
+  animation: fadeInOutLeft 5s infinite; /* 使用动画并持续循环 */
+}
 
+@keyframes fadeInOutLeft {
+  0% {
+    /* 初始状态 */
+    opacity: 0;
+    transform: translateX(100px); /* 初始位置 */
+  }
+  50% {
+    /* 中间状态 - 淡入 */
+    opacity: 1;
+    transform: translateX(0); /* 向右平移到初始位置 */
+  }
+  100% {
+    /* 结束状态 - 淡出 */
+    opacity: 0;
+    transform: translateX(-120px); /* 向右平移到结束位置 */
+  }
+}
 .wave.four {
   animation: moveLeft 6s ease infinite;
 }
