@@ -1,4 +1,4 @@
-html {
+html{
   margin: 0 auto;
   padding: 0;
   font-family: "Gen Jyuu Gothic", "Otsutome_font", "Mukasi Mukasi",
@@ -15,4 +15,23 @@ html {
   position: relative;
   text-align: center;
   overflow-x: hidden;
+  background: cover;
+}
+
+/* 背景圖 Q4 */
+.q4-background {
+  background-image: url("./img/img/Q4\ bg.png");
+}
+
+.q5-background {
+  background-image: url("./img/img/Q1.png");
+}
+
+/* 背景圖 Q6 */
+.q6-background {
+  background-image: url("./img/img/Q6.png");
+}
+
+.q8-background {
+  background-image: url("./img/img/final\ bg@3x.png");
 }

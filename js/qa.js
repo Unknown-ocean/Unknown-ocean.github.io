@@ -34,11 +34,19 @@ $(document).ready(function () {
             // 如果您希望移动后 logo 不再动画，则将 transition 属性设为空字符串
             logo.css('transition', 'transform 1s');
         });
+        $('.image-selection img').on('click', function () {
+            // 清除所有圖像的亮起狀態
+            $('.image-selection img').removeClass('selected');
+            // 點亮當前點擊的圖像
+            $(this).addClass('selected');
+            // 顯示 "選好了" 按鈕
+            $('#selectBtn').show();
+        });
     });
 
 
     // 监听"選好了"按钮点击事件
-    $('#selectBtn').on('click', function () {
+    $('.selectBtn').on('click', function () {
         // 移动进度条的 logo
         $('.logo').animate({ left: '35px' }, 'slow');
 
@@ -147,31 +155,58 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    // 監聽形狀圖像的點擊事件
+    $('.question[data-index="3"] .image-selection img').on('click', function () {
+        // 顯示 "選好了" 按鈕
+        $('.question[data-index="3"] .selectBtn').show();
+    });
+
+    // 監聽 "選好了" 按鈕點擊事件
+    $('.question[data-index="3"] .selectBtn').on('click', function () {
+        // 移動進度條的 logo
+        $('.progress .logo').animate({ left: '35px' }, 'slow');
+
+        // 隱藏當前問題並顯示下一個問題
+        let currentQuestion = $(this).closest('.question');
+        currentQuestion.hide();
+
+        // 獲取下一個問題的索引
+        let nextQuestionIndex = parseInt(currentQuestion.data('index')) + 1;
+        let nextQuestion = $('.question[data-index="' + nextQuestionIndex + '"]');
+
+        // 如果下一個問題存在，則顯示它
+        if (nextQuestion.length) {
+            nextQuestion.show();
+        } else {
+            // 如果沒有下一個問題，執行其他操作，例如跳轉到結果頁面
+            console.log('所有問題都已經回答完畢。');
+        }
+    });
+});
+
+
 //q5 bg
 $(document).ready(function () {
     $('.question').on('click', function () {
         // 获取当前问题的索引
         var currentIndex = parseInt($(this).data('index'));
-        
+
         // 根据问题的索引修改 HTML 元素的属性
+        if (currentIndex === 2) {
+            $('html').addClass('q4-background');
+        }
+        if (currentIndex === 3) {
+            $('html').addClass('q5-background');
+        }
         if (currentIndex === 4) {
-            $('html').css({
-                'background-image': 'url("./img/img/Q6.png")',
-                'display': 'flex',
-                'background-position':'center center',
-                'position':'relative',
-                'background-clip':'boder-box',
-                'margin':'0 auto',
-                'padding':'0',
-                '-webkit-box-align': 'center',
-                'background-repeat': 'no-repeat',
-                'background-clip': 'border-box',
-                'background-color': '#01235e',
-              
-            });
+            $('html').addClass('q6-background');
+        } if (currentIndex === 6) {
+            $('html').addClass('q8-background');
         }
     });
 });
+
 
 
 

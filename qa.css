@@ -183,7 +183,7 @@ p.q3 {
   margin-left: 30%; /* 调整右箭头的位置 */
 }
 
-#selectBtn {
+.selectBtn {
   width: 212px;
   height: 64px;
   padding: 12px 10px;
@@ -240,7 +240,15 @@ p.q4 {
   margin: -20px 0;
 }
 
+
 .qa_btn.q7 {
   width: 258px;
   height: 54px;
 }
+
+.qa_btn.q8 {
+  background-image: url(./img/img/btn\ bb@3x.png);
+  width: 258px;
+  height: 54px;
+}
+
