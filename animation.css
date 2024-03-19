@@ -99,6 +99,21 @@
     opacity: 0.5;
   }
 }
+.eye {
+  opacity: 1; /* 初始设置为透明 */
+  animation: fadeInOut 10s infinite; /* 使用动画并持续循环 */
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .wave.five {
   opacity: 0; /* 初始设置为透明 */
   animation: fadeInOut 7s infinite; /* 使用动画并持续循环 */
@@ -134,5 +149,29 @@
     /* 结束状态 - 淡出 */
     opacity: 0;
     transform: translateX(20px); /* 向右平移到结束位置 */
+  }
+}
+@keyframes blink {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.01);
+  }
+}
+
+.blinking{
+  animation: blink 0.5s ease-in-out;
+  animation-delay: 2s;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.01);
   }
 }

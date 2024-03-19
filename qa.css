@@ -59,7 +59,19 @@ p.qa {
   font-weight: 500;
   text-align: left;
   width: 308px;
-  margin-top: 48px;
+}
+
+.question{
+  opacity: 0;
+  animation: fade 1.5s forwards; 
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 p.q3 {
@@ -70,7 +82,7 @@ p.q3 {
   position: relative;
   width: 100%;
   height: 320px; /* 根据需要调整波浪图像容器的高度 */
-  top: -32px;
+  top: -28px;
 }
 
 /* 波浪图像样式 */
@@ -207,7 +219,7 @@ p.q3 {
 
 /*q4*/
 .sea {
-  margin: 20px 28px ;
+  margin: 20px 28px;
 }
 .ocean {
   margin: 25px 36px 0 0;
@@ -267,5 +279,3 @@ p.q4 {
   margin: 4px 0;
   font-weight: 600;
 }
-
-
