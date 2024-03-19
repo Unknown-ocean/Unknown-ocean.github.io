@@ -20,12 +20,9 @@ html{
 
 /* 背景圖 Q4 */
 .q4-background {
-  background-image: url("./img/img/Q4\ bg.png");
+  background-image: url("./img/img/Q4 bg.png");
 }
 
-.q5-background {
-  background-image: url("./img/img/Q1.png");
-}
 
 /* 背景圖 Q6 */
 .q6-background {
@@ -34,4 +31,8 @@ html{
 
 .q8-background {
   background-image: url("./img/img/final\ bg@3x.png");
+}
+
+.final-background {
+  background-image: url("./img/img/finall.png");
 }

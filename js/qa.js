@@ -34,14 +34,6 @@ $(document).ready(function () {
             // 如果您希望移动后 logo 不再动画，则将 transition 属性设为空字符串
             logo.css('transition', 'transform 1s');
         });
-        $('.image-selection img').on('click', function () {
-            // 清除所有圖像的亮起狀態
-            $('.image-selection img').removeClass('selected');
-            // 點亮當前點擊的圖像
-            $(this).addClass('selected');
-            // 顯示 "選好了" 按鈕
-            $('#selectBtn').show();
-        });
     });
 
 
@@ -156,14 +148,8 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    // 監聽形狀圖像的點擊事件
-    $('.question[data-index="3"] .image-selection img').on('click', function () {
-        // 顯示 "選好了" 按鈕
-        $('.question[data-index="3"] .selectBtn').show();
-    });
-
     // 監聽 "選好了" 按鈕點擊事件
-    $('.question[data-index="3"] .selectBtn').on('click', function () {
+    $('.selectBtn,.qa_btn').on('click', function () {
         // 移動進度條的 logo
         $('.progress .logo').animate({ left: '35px' }, 'slow');
 
@@ -192,20 +178,29 @@ $(document).ready(function () {
         // 获取当前问题的索引
         var currentIndex = parseInt($(this).data('index'));
 
-        // 根据问题的索引修改 HTML 元素的属性
+        // 移除可能存在的之前的背景类
+        $('html').removeClass('q4-background q5-background q6-background q8-background');
+
+        // 根据问题的索引添加对应的背景类
         if (currentIndex === 2) {
             $('html').addClass('q4-background');
         }
-        if (currentIndex === 3) {
-            $('html').addClass('q5-background');
-        }
         if (currentIndex === 4) {
             $('html').addClass('q6-background');
-        } if (currentIndex === 6) {
+        }
+        if (currentIndex === 5) {
+            $('html').addClass('q6-background');
+        }
+        if (currentIndex === 6) {
             $('html').addClass('q8-background');
+        }
+        if (currentIndex === 7) {
+            $('html').addClass('final-background');
         }
     });
 });
+
+
 
 
 

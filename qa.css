@@ -12,7 +12,6 @@ body {
 
 .progress {
   position: relative;
-  margin-top: 60px;
 }
 .logo {
   position: absolute;
@@ -46,7 +45,8 @@ body {
 }
 
 .questions,
-.question {
+.question,
+.final {
   width: auto;
   font-size: 16px;
   align-items: center;
@@ -164,12 +164,16 @@ p.q3 {
 }
 
 .leftarrow_btn,
-.rightarrow_btn {
+.rightarrow_btn,
+.uparrow_btn {
   background: none;
   border: none;
-  cursor: pointer;
   display: inline-block;
   vertical-align: middle;
+}
+.leftarrow_btn,
+.rightarrow_btn {
+  cursor: pointer;
 }
 .question {
   position: relative;
@@ -240,7 +244,6 @@ p.q4 {
   margin: -20px 0;
 }
 
-
 .qa_btn.q7 {
   width: 258px;
   height: 54px;
@@ -251,4 +254,41 @@ p.q4 {
   width: 258px;
   height: 54px;
 }
+
+.question[data-index="8"] {
+  display: none;
+}
+.uparrow_btn {
+  margin-top: 12px;
+}
+
+.tap{
+  animation: moveUp 1s ease infinite;
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.tap_t {
+  margin: 4px 0;
+  font-weight: 600;
+}
+.shine {
+  opacity: 0;
+  animation: shineAnimation 3s ease-in-out infinite;
+}
+
+@keyframes shineAnimation {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
 
