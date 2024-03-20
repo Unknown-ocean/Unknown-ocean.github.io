@@ -4,7 +4,10 @@ $(document).ready(function () {
     let randomIndex = Math.floor(Math.random() * $resultImgs.length);
     let $selectedImg = $resultImgs.eq(randomIndex);
 
-    // 显示选中的图片，并隐藏其他图片
-    $resultImgs.hide();
-    $selectedImg.show();
+    // 隐藏其他图片
+    $resultImgs.each(function(index, img) {
+        if ($(img).attr('src') !== $selectedImg.attr('src')) {
+            $(img).hide();
+        }
+    });
 });
