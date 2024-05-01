@@ -14,6 +14,7 @@ body {
 }
 .progress {
   position: relative;
+  margin-top: 16%;
 }
 .logo {
   position: absolute;
@@ -27,7 +28,7 @@ body {
   left: 151px;
 }
 
-.qa_btn {
+.qa_btn{
   width: 260px;
   padding: 15px 10px;
   margin: 12px 0;
@@ -43,6 +44,10 @@ body {
   font-size: 16px;
   font-weight: bold;
   text-align: center;
+  cursor: pointer;
+}
+
+.qa_img{
   cursor: pointer;
 }
 
@@ -167,6 +172,7 @@ p.q3 {
   text-align: center;
 }
 
+
 .biology,
 .money,
 .remains {
@@ -249,7 +255,7 @@ p.q4 {
 
 /*q6*/
 .q6 img {
-  margin-top: 46px;
+  margin-top: 50px;
 }
 
 .qa_btn.q6 {
@@ -281,3 +287,4 @@ p.q4 {
   margin: 4px 0;
   font-weight: 600;
 }
+

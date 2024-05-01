@@ -6,7 +6,7 @@ $(document).ready(function () {
     $('.question').not(':eq(0)').hide();
 
     // 点击问题按钮时的处理
-    $('.qa_btn').on('click', function () {
+    $('.qa_btn,.qa_img').on('click', function () {
         // 累积分数
         totalScore += parseInt($(this).data('score'));
 
@@ -23,22 +23,23 @@ $(document).ready(function () {
         }
     });
 
-    //progress
-    $(document).ready(function () {
-        // 初始 logo 位置
-        let logoPosition = 0;
-    
-        // 点击 .qa_btn 或 .selectBtn 时触发
-        $('.qa_btn, .selectBtn').on('click', function () {
-            // 移动 logo 到右边
-            $('.logo').animate({ left: '+=14%' }, 'slow');
-    
-            // 检查是否是最后一个问题，如果是则隐藏进度条
-            if ($(this).closest('.question').data('index') === 7) {
-                $('.progress').fadeOut();
-                $('.question[data-index="8"]').fadeIn();
-            }
-        });
+    // 初始 logo 位置
+    let logoPosition = 0;
+
+    // 点击 .qa_btn 或 .qa_img 时触发
+    $('.qa_btn, .qa_img').on('click', function () {
+        // 移动 logo 到右边
+        $('.logo').animate({ left: '+=14%' }, 'slow');
+
+        // 檢查當前位置
+        console.log($('.logo').position().left);
+
+        // 检查是否是最后一个问题，如果是则隐藏进度条
+        if ($(this).closest('.question').data('index') === 7) {
+            console.log('Reached last question');
+            $('.progress').fadeOut();
+            $('.question[data-index="8"]').fadeIn();
+        }
     });
     
     // 监听"選好了"按钮点击事件

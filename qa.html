@@ -15,7 +15,19 @@
 </head>
 
 <body>
-    <div class="questions">
+    <div id="scores" style="display: none;">
+        <h2>各项分数</h2>
+        <ul  style="list-style-type: none;">
+            <li>create: <span id="createScore">0</span></li>
+            <li>detail: <span id="detailScore">0</span></li>
+            <li>one: <span id="oneScore">0</span></li>
+            <li>leader: <span id="leaderScore">0</span></li>
+            <li>talk: <span id="talkScore">0</span></li>
+            <li>team: <span id="teamScore">0</span></li>
+        </ul>
+    </div>
+
+    <div class="questions" >
         <div class="progress">
             <div class="logo"><img src="./img/img/logo progress.png" width="18"></div>
             <div class="bar"><img src="./img/img/bar.png" width="280"></div>
@@ -36,36 +48,36 @@
 
         <div class="question" data-index="1">
             <p class="qa">習慣了一陣子美人魚的姿態後面向眼前的茫茫大海，你最期待能看到…</p>
-            <div class="container">
+            <div class="container" style="margin-top: 20%;">
                 <div class="slides">
                     <div class="slide">
-                        <img src="./img/img/q2 a_1@4x.png" data-score="10" data-person="create" alt="智慧生物的棲息地"
+                        <img src="./img/img/q2 a_1@4x.png" class="qa_img" data-score="10" data-person="create" alt="智慧生物的棲息地"
                             width="370">
                         <p class="option">智慧生物的棲息地</p>
                     </div>
                     <div class="slide">
-                        <img src="./img/img/q2 b_1@4x.png" data-score="15" data-person="leader" alt="金光閃閃的大秘寶"
+                        <img src="./img/img/q2 b_1@4x.png" class="qa_img" data-score="15" data-person="leader" alt="金光閃閃的大秘寶"
                             width="376">
                         <p class="option">金光閃閃的大秘寶</p>
                     </div>
                     <div class="slide">
-                        <img src="./img/img/q2 c@2x.png" data-score="12" data-person="detail" alt="未公開的古代遺跡之謎"
+                        <img src="./img/img/q2 c@2x.png"  class="qa_img" data-score="12" data-person="detail" alt="未公開的古代遺跡之謎"
                             width="326" style="margin-top: 64px;">
                         <p class="option">未公開的古代遺跡之謎</p>
                     </div>
                 </div>
                 <span class="warning">
-                    <p style="margin-top: 16px;">點選箭頭選擇答案</p>
+                    <p style="margin-top: 16px;">點選圖片選擇答案</p>
                 </span>
-                <div class="arrow-container">
+                <div class="arrow-container" style="margin-top: -18%;">
                     <button type="button" class="leftarrow_btn"><img src="./img/img/arrow@4x.png" width="36"></button>
                     <button type="button" class="rightarrow_btn"><img src="./img/img/arrow@4x 2.png"
                             width="36"></button>
                 </div>
-                <button class="selectBtn">選好了</button>
+                <!--<button class="selectBtn" data-score="" data-person="">選好了</button>-->
             </div>
-
         </div>
+        
         <div class="question" data-index="2">
             <p class="qa q3">你突然收到一則訊息，上面寫著</p>
             <div class="container">
@@ -82,21 +94,21 @@
         <div class="question" data-index="3">
             <p class="qa q4">此時你看到不遠處散發光芒的寶石緩緩靠近，溫暖又刺眼，好像是來幫助你解開人魚詛咒，瞇眼仔細看後發現它的形狀像是…</p>
             <div class="container">
-                <div class="image-selection" style="margin: 80px 0;">
-                    <img class="sea pearl" src="./img/img/pearl-1@3x.png" data-score="12" data-person="detail" alt="珍珠"
+                <div class="image-selection" style="margin: 40px 0;">
+                    <img class="qa_img sea pearl" src="./img/img/pearl-1@3x.png" data-score="12" data-person="detail" alt="珍珠"
                         width="80">
-                    <img class="sea shell" src="./img/img/shell-1@3x.png" data-score="20" data-person="team" alt="貝殼"
+                    <img class="qa_img sea shell" src="./img/img/shell-1@3x.png" data-score="20" data-person="team" alt="貝殼"
                         width="100">
                     <br><span class="warning">
-                        <p>請點選圖案</p>
+                        <p>機會只有一次<br>請慎選圖案</p>
                     </span>
-                    <img class="ocean star" src="./img/img/star-1@3x.png" data-score="10" data-person="create" alt="星星"
+                    <img class="qa_img ocean star" src="./img/img/star-1@3x.png" data-score="10" data-person="create" alt="星星"
                         width="108">
-                    <img class="ocean coral" src="./img/img/coral-1@3x.png" data-score="15" data-person="one" alt="珊瑚"
+                    <img class="qa_img ocean coral" src="./img/img/coral-1@3x.png" data-score="15" data-person="one" alt="珊瑚"
                         width="98">
                 </div>
             </div>
-            <button class="selectBtn">選好了</button>
+            <!--<button class="selectBtn">選好了</button>-->
         </div>
         <div class="question" data-index="4">
             <p class="qa">跟著寶石游著游著，你發現海底熱鬧繁華，原來是正在舉辦音樂節，同時，遠方出現水母向你招手，邀你一同歡慶，於是你...</p>
@@ -169,8 +181,7 @@
             <span class="warning" style="margin-top: 40px;">
                 <p>(點擊珊瑚花查看你的設畜身份)</p>
             </span>
-            <a href="./results.html">
-                <img class="shine" src="./img/img/shinning@3x.png" width="312"
+            <a id="resultLink" href="./results.html"><img class="shine" src="./img/img/shinning@3x.png" width="312"
                     style="margin-top: 60px;position: absolute;">
                 <img class="flower" src="./img/img/flower@3x.png" width="312" style="margin-top: 60px;">
             </a>
@@ -180,6 +191,9 @@
                 <p class="tap_t">Tap</p>
             </div>
         </div>
+
+        <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+
     </div>
 
 

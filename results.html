@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="在設畜生態的你是什麼魚 | 茫茫大海">
     <meta property="og:description"
-        content="透過海底探險的情境題，讓我們一同深入茫茫大海中，找到屬於你的「設畜」命定角色！在3/20~3/22活動現場出示你的測驗結果即可免費領取對應角色明信片乙張！數量有限，送完為止！">
+        content="透過海底探險的情境題，讓我們一同深入茫茫大海中，找到屬於你的「設畜」命定角色！在活動現場出示你的測驗結果即可免費領取對應角色明信片乙張！數量有限，送完為止！">
     <meta property="og:image" content="你的新缩略图链接">
     <title>在設畜生態的你是什麼魚 | 茫茫大海</title>
     <link rel="icon" type="image" href="./img/logo.svg">
@@ -16,9 +16,21 @@
 </head>
 
 <body>
+    <div id="result">
+        <h1>各角色的總分</h1>
+        <ul>
+            <!-- 在页面中显示每个 data-person 的分数 -->
+            <li>create: <span id="createScore"></span></li>
+            <li>detail: <span id="detailScore"></span></li>
+            <li>one: <span id="oneScore"></span></li>
+            <li>leader: <span id="leaderScore"></span></li>
+            <li>talk: <span id="talkScore"></span></li>
+            <li>team: <span id="teamScore"></span></li>
+        </ul>
+    </div>
+
     <div class="result">
-        <img src="./img/result/create.png" alt="沙丁魚" data-person="create">
-        目前結果頁部分還只是示意圖，完成之後會公布在ig歡迎再來體驗不同結果~ 所以記得追蹤我們！ig@unknown._ocean
+        <img src="" alt="沙丁魚" data-person="create">
         <!--<img src="./img/result/detail.png" alt="燈籠魚" data-person="detail">
         <img src="./img/result/talk.png" alt="海豚" data-person="talk">
         <img src="./img/result/team.png" alt="抹" data-person="team">
