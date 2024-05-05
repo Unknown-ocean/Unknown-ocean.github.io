@@ -61,12 +61,12 @@ $(document).ready(function () {
 
             // 創建一個對象，將每個項目映射到相應的結果頁面
             const resultPages = {
-                create: './results/result1.html',
-                detail: './results/result2.html',
-                one: './results/result3.html',
-                leader: './results/result4.html',
-                talk: './results/result5.html',
-                team: './results/result6.html'
+                create: './result1.html',
+                detail: './result2.html',
+                one: './result3.html',
+                leader: './result4.html',
+                talk: './result5.html',
+                team: './result6.html'
             };
 
             // 找到最高得分的項目的鍵
