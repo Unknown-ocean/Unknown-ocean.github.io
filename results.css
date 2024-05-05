@@ -134,14 +134,14 @@ img {
     width: 861px;
   }
   .comic{
-    padding: 20px 56px;
+    padding: 20px 68px;
     border-radius: 50px;
-    top: -720px;
-    font-size: 18px;
+    top: -840px;
+    font-size: 24px;
   }
   .btns, .again, .resultimg{
     padding: 18px 30px 18px 0px;
-    font-size: 18px;
-    top: -620px;
+    font-size: 24px;
+    top: -700px;
   }
 }
