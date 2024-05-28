@@ -27,6 +27,16 @@ a {
   padding: 10px 20px;
   border-radius: 25px;
   top: -430px;
+  animation: heartbeat 3s ease-in-out infinite; /* Total duration is now 3s */
+}
+
+@keyframes heartbeat {
+    0%, 20%, 100% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(1.1);
+    }
 }
 .again,
 .resultimg {
@@ -37,11 +47,12 @@ a {
   border: 2px solid black;
   z-index: 101;
   top: -430px;
+  
 }
 
 .again:hover,
 .resultimg:hover {
-  background-color: #3498db;
+  background-color: #000;
   color: white;
   transition: 0.8s;
   border: none;
@@ -64,6 +75,7 @@ a {
   z-index: 101;
   position: relative;
 }
+
 
 span img {
   margin-bottom: -40px;
